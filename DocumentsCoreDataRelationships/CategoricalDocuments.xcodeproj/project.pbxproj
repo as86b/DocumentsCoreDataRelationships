@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		58A73BA21FB55081001EF4DF /* CategoricalExpenses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CategoricalExpenses.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58A73BA21FB55081001EF4DF /* CategoricalDocuments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CategoricalDocuments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58A73BA51FB55081001EF4DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58A73BAA1FB55081001EF4DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58A73BAF1FB55081001EF4DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		58A73BA31FB55081001EF4DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				58A73BA21FB55081001EF4DF /* CategoricalExpenses.app */,
+				58A73BA21FB55081001EF4DF /* CategoricalDocuments.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,9 +99,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58A73BA11FB55081001EF4DF /* CategoricalExpenses */ = {
+		58A73BA11FB55081001EF4DF /* CategoricalDocuments */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58A73BB71FB55081001EF4DF /* Build configuration list for PBXNativeTarget "CategoricalExpenses" */;
+			buildConfigurationList = 58A73BB71FB55081001EF4DF /* Build configuration list for PBXNativeTarget "CategoricalDocuments" */;
 			buildPhases = (
 				58A73B9E1FB55081001EF4DF /* Sources */,
 				58A73B9F1FB55081001EF4DF /* Frameworks */,
@@ -111,9 +111,9 @@
 			);
 			dependencies = (
 			);
-			name = CategoricalExpenses;
+			name = CategoricalDocuments;
 			productName = CategoricalExpenses;
-			productReference = 58A73BA21FB55081001EF4DF /* CategoricalExpenses.app */;
+			productReference = 58A73BA21FB55081001EF4DF /* CategoricalDocuments.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,7 +132,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58A73B9D1FB55081001EF4DF /* Build configuration list for PBXProject "CategoricalExpenses" */;
+			buildConfigurationList = 58A73B9D1FB55081001EF4DF /* Build configuration list for PBXProject "CategoricalDocuments" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -145,7 +145,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58A73BA11FB55081001EF4DF /* CategoricalExpenses */,
+				58A73BA11FB55081001EF4DF /* CategoricalDocuments */,
 			);
 		};
 /* End PBXProject section */
@@ -347,7 +347,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58A73B9D1FB55081001EF4DF /* Build configuration list for PBXProject "CategoricalExpenses" */ = {
+		58A73B9D1FB55081001EF4DF /* Build configuration list for PBXProject "CategoricalDocuments" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58A73BB51FB55081001EF4DF /* Debug */,
@@ -356,7 +356,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58A73BB71FB55081001EF4DF /* Build configuration list for PBXNativeTarget "CategoricalExpenses" */ = {
+		58A73BB71FB55081001EF4DF /* Build configuration list for PBXNativeTarget "CategoricalDocuments" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58A73BB81FB55081001EF4DF /* Debug */,

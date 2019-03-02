@@ -11,7 +11,7 @@ import UIKit
 class NewDocumentViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var amountTextField: UITextField!
+    //contentsTextField
     @IBOutlet weak var datePicker: UIDatePicker!
     
     var category: Category?

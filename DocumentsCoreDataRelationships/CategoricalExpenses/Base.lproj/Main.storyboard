@@ -133,7 +133,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="expenseCell" textLabel="j6N-2u-XVw" detailTextLabel="6aE-Tj-1q3" style="IBUITableViewCellStyleSubtitle" id="1vI-0E-bYh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="documentCell" textLabel="j6N-2u-XVw" detailTextLabel="6aE-Tj-1q3" style="IBUITableViewCellStyleSubtitle" id="1vI-0E-bYh">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1vI-0E-bYh" id="JW4-F0-Nsf">
@@ -175,24 +175,20 @@
                     </view>
                     <navigationItem key="navigationItem" title="Documents" id="ONo-1V-JFP">
                         <barButtonItem key="backBarButtonItem" title=" " id="8Ic-88-d5D"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Y8Y-xd-Yrv">
-                            <connections>
-                                <action selector="addNewExpense:" destination="u0S-x3-qR8" id="1cM-JV-Omk"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Y8Y-xd-Yrv"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="Puk-RQ-0VB" kind="show" identifier="showExpense" id="1oZ-QS-jrd"/>
+                        <segue destination="Puk-RQ-0VB" kind="show" identifier="showDocument" id="1oZ-QS-jrd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1e-PX-DNa" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1567" y="-546"/>
         </scene>
-        <!--New Expense-->
+        <!--New Document-->
         <scene sceneID="YBH-kY-cXb">
             <objects>
-                <viewController id="Puk-RQ-0VB" customClass="NewExpenseViewController" customModule="CategoricalExpenses" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Puk-RQ-0VB" customClass="NewDocumentViewController" customModule="CategoricalDocuments" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tbY-xm-ahq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,71 +199,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1a0-s8-LXU">
-                                <rect key="frame" x="16" y="120" width="65" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1a0-s8-LXU">
+                                <rect key="frame" x="16" y="120" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfO-Q0-pfm">
-                                <rect key="frame" x="16" y="153.5" width="65" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expense Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S93-ds-Ls5">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Document Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S93-ds-Ls5">
                                 <rect key="frame" x="74" y="77.5" width="291" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expense Amount..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FlJ-AK-Jnz">
-                                <rect key="frame" x="89" y="115.5" width="276" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Document Amount..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FlJ-AK-Jnz">
+                                <rect key="frame" x="94" y="115.5" width="271" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dE2-d5-bW5">
-                                <rect key="frame" x="0.0" y="182.5" width="375" height="162"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="VxF-4g-16x"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="531670324.66343898">
-                                    <!--2017-11-06 14:12:04 +0000-->
-                                </date>
-                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dE2-d5-bW5" firstAttribute="leading" secondItem="DbM-wP-n2n" secondAttribute="leading" id="2EN-Ci-n26"/>
                             <constraint firstItem="S93-ds-Ls5" firstAttribute="leading" secondItem="owC-CA-xdr" secondAttribute="trailing" constant="8" id="GLt-49-GUg"/>
                             <constraint firstItem="1a0-s8-LXU" firstAttribute="leading" secondItem="owC-CA-xdr" secondAttribute="leading" id="I5J-s4-sLb"/>
                             <constraint firstItem="DbM-wP-n2n" firstAttribute="trailing" secondItem="S93-ds-Ls5" secondAttribute="trailing" constant="10" id="OBN-w9-nfQ"/>
                             <constraint firstItem="FlJ-AK-Jnz" firstAttribute="centerY" secondItem="1a0-s8-LXU" secondAttribute="centerY" id="Pc4-aa-0ro"/>
                             <constraint firstItem="FlJ-AK-Jnz" firstAttribute="trailing" secondItem="S93-ds-Ls5" secondAttribute="trailing" id="Q1n-cb-7K1"/>
                             <constraint firstItem="FlJ-AK-Jnz" firstAttribute="leading" secondItem="1a0-s8-LXU" secondAttribute="trailing" constant="8" id="VZH-ke-6Sa"/>
-                            <constraint firstItem="pfO-Q0-pfm" firstAttribute="trailing" secondItem="1a0-s8-LXU" secondAttribute="trailing" id="aQe-mr-ndA"/>
-                            <constraint firstItem="pfO-Q0-pfm" firstAttribute="leading" secondItem="1a0-s8-LXU" secondAttribute="leading" id="br9-UK-OYS"/>
-                            <constraint firstItem="dE2-d5-bW5" firstAttribute="trailing" secondItem="DbM-wP-n2n" secondAttribute="trailing" id="ffV-Oe-Agh"/>
-                            <constraint firstItem="pfO-Q0-pfm" firstAttribute="top" secondItem="FlJ-AK-Jnz" secondAttribute="bottom" constant="8" id="pj5-Mx-OCF"/>
                             <constraint firstItem="FlJ-AK-Jnz" firstAttribute="top" secondItem="S93-ds-Ls5" secondAttribute="bottom" constant="8" id="qTs-Td-rol"/>
-                            <constraint firstItem="dE2-d5-bW5" firstAttribute="top" secondItem="pfO-Q0-pfm" secondAttribute="bottom" constant="8" id="vmy-cW-39J"/>
                             <constraint firstItem="S93-ds-Ls5" firstAttribute="centerY" secondItem="owC-CA-xdr" secondAttribute="centerY" id="wA0-9a-8Lm"/>
                             <constraint firstItem="owC-CA-xdr" firstAttribute="leading" secondItem="DbM-wP-n2n" secondAttribute="leading" constant="16" id="wGO-SU-brG"/>
                             <constraint firstItem="owC-CA-xdr" firstAttribute="top" secondItem="DbM-wP-n2n" secondAttribute="top" constant="18" id="zAi-Jp-LdG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DbM-wP-n2n"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Expense" id="6JN-0F-ESr">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Eb5-yi-Lx2">
-                            <connections>
-                                <action selector="saveExpense:" destination="Puk-RQ-0VB" id="ExI-7Y-eMy"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="New Document" id="6JN-0F-ESr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Eb5-yi-Lx2"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="amountTextField" destination="FlJ-AK-Jnz" id="dnq-7L-n2N"/>
-                        <outlet property="datePicker" destination="dE2-d5-bW5" id="gxh-87-f4O"/>
                         <outlet property="nameTextField" destination="S93-ds-Ls5" id="n7e-iv-Fow"/>
                     </connections>
                 </viewController>
